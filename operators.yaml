@@ -1,0 +1,41 @@
+operators:
+  cernet:
+    country: 'CN'
+    # CNGI also includes commercial operators; AS23911 is CERNET's Beijing IX.
+    pattern: '(cernet|^AS23911\b)'
+  china:
+    country: 'CN'
+    pattern: ''
+    origin_only: true
+    trusted_transit_operators:
+      - 'chinanet'
+      - 'cmcc'
+      - 'unicom'
+      - 'cstnet'
+      - 'cernet'
+    # AS142111 has trusted domestic paths but originates known foreign prefixes.
+    exclude_asn:
+      - '142111'
+      - '45102'
+    registry_fallback_country: 'CN'
+  chinanet:
+    country: 'CN'
+    pattern: '(china ?telecom|chinanet|^AS(4847|38035|38270)\b)'
+    # The legacy CHINANET description of AS18344 refers to a Unicom network.
+    exclude_asn:
+      - '18344'
+  cmcc:
+    country: 'CN'
+    pattern: '(china mobile|cmnet|tietong|CHINA RAILWAY)'
+  cstnet:
+    country: 'CN'
+    pattern: 'cstnet'
+  drpeng:
+    country: 'CN'
+    pattern: '(dxtnet|dr.?peng|gxblnet|xirang)'
+  googlecn:
+    country: 'CN'
+    pattern: 'AS24424'
+  unicom:
+    country: 'CN'
+    pattern: '(unicom|cnc)'

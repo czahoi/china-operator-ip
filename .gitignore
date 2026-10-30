@@ -1,6 +1,10 @@
-/asnames.txt
-/rib.txt
-/rib.bz2
-/rib6.txt
-/rib6.bz2
-/result
+asnames.txt
+autnums.html
+delegated-*-extended-latest
+rib.*
+rib6.*
+rib-*
+result/
+analysis/
+/target/
+*.bin
